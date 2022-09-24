@@ -1,3 +1,5 @@
+echo "### use os"
+cat /etc/os-release
 echo "### apt"
 apt-get update && apt-get install libsqlite3-dev libbz2-dev libncurses5-dev libgdbm-dev liblzma-dev libssl-dev tcl-dev tk-dev libreadline-dev
 echo "### requirements install"
