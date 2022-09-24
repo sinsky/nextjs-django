@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PostsProps } from "../lib/posts";
 
 const Post = ({ post }: { post: PostsProps }) => {
@@ -5,7 +6,11 @@ const Post = ({ post }: { post: PostsProps }) => {
     <div>
       <span>{post.id}</span>
       {" : "}
-      <span className="cursor-pointer text-blue-500 border-b border-blue-500 hover:bg-gray-200">{post.title}</span>
+      <Link href={`/posts/${post.id}`}>
+        <a>
+          <span className="cursor-pointer text-blue-500 border-b border-blue-500 hover:bg-gray-200">{post.title}</span>
+        </a>
+      </Link>
     </div>
   );
 };
