@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { PostsProps, getAllPostsData } from "../lib/posts";
+import { PostsProps, getAllPostsData } from "../library/posts";
 import Post from "../components/PostView";
 
 const Blog = ({ posts }: { posts: PostsProps[] }) => {
