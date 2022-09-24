@@ -5,7 +5,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <Layout title="Contact">
-      <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
+      <div className="bg-white text-center shadow-xl p-8 container md:max-w-[600px] rounded">
         <div className="mt-4">
           <p className="font-bold">Contact Info</p>
         </div>
@@ -45,13 +45,7 @@ const ContactData = ({ title, description }: { title: string; description: strin
 const SocialIcon = ({ href, src, size, alt }: { href: string; src: string; size: number; alt: string }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <Image
-        className="w-6 h-6 mr-3"
-        src={`/70-social-icons/${src}`}
-        width={size}
-        height={size}
-        alt={alt}
-      />
+      <Image className="w-6 h-6 mr-3" src={`/70-social-icons/${src}`} width={size} height={size} alt={alt} />
     </a>
   );
 };
