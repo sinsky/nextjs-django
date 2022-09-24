@@ -1,7 +1,20 @@
-echo "### use os"
-cat /etc/os-release
-echo "### apt"
-apt-get update && apt-get install libsqlite3-dev libbz2-dev libncurses5-dev libgdbm-dev liblzma-dev libssl-dev tcl-dev tk-dev libreadline-dev
+echo "### update sqlite3"
+wget https://www.sqlite.org/2022/sqlite-autoconf-3390300.tar.gz
+tar xvfz sqlite-autoconf-3390300.tar.gz
+cd sqlite-autoconf-3390300
+
+# コンパイル
+./configure --prefix=/usr/local
+make
+sudo make install
+
+# シンボリックリンクを設定してPATHを通す
+sudo mv /usr/bin/sqlite3 /usr/bin/sqlite3_old
+sudo ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
+echo export LD_LIBRARY_PATH="/usr/local/lib" >> ~/.bash_profile
+source ~/.bash_profile
+
+sqlite3 --version
 echo "### requirements install"
 python3 -m pip install -r requirements.dev.txt
 
