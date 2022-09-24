@@ -9,6 +9,7 @@ services:
     name: udemy_rest_api_webservice
     plan: free
     env: python
+    rootDir: drf-jwt
     buildCommand: "./build.sh"
     startCommand: "gunicorn rest_api.wsgi:application"
     envVars:
