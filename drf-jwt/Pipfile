@@ -19,7 +19,7 @@ flake8 = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.9"
 
 [scripts]
 server = "python3 manage.py runserver"
