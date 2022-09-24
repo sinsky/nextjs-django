@@ -11,6 +11,7 @@ env | grep RENDER
 
 echo "### makemigrations"
 python3 manage.py makemigrations
+python3 manage.py showmigrations
 echo "### collectstatic"
 python3 manage.py collectstatic
 echo "### migrate"
