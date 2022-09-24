@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
-import { getAllPostsIds, getPostData, PostsProps } from "../../lib/posts";
+import { getAllPostsIds, getPostData, PostsProps } from "../../library/posts";
 
 const Post = ({ post }: { post: PostsProps }) => {
   if (!post) return <div>Loading...</div>;

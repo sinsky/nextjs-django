@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PostsProps } from "../lib/posts";
+import { PostsProps } from "../library/posts";
 
 const Post = ({ post }: { post: PostsProps }) => {
   return (
