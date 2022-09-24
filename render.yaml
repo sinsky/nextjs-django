@@ -13,7 +13,7 @@ services:
     buildCommand: ./build.sh
     branch: main
     repo: https://github.com/sinsky/nextjs-django
-    startCommand: "gunicorn rest_api.wsgi:application"
+    startCommand: gunicorn rest_api.wsgi:application
     envVars:
       - key: DATABASE_URL
         fromDatabase:
