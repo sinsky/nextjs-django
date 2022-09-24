@@ -16,7 +16,7 @@ import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -62,6 +62,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "https://*.onrender.com",
+    "https://*.vercel.app"
 ]
 
 SIMPLE_JWT = {
@@ -138,6 +140,8 @@ LANGUAGE_CODE = 'ja'
 TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
