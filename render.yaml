@@ -11,7 +11,7 @@ services:
     env: python
     rootDir: drf-jwt
     buildCommand: ./drf-jwt/build.sh
-    branch: master
+    branch: main
     repo: https://github.com/sinsky/nextjs-django
     startCommand: "gunicorn rest_api.wsgi:application"
     envVars:
