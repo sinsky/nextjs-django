@@ -13,6 +13,8 @@ pyjwt = "*"
 python-decouple = "*"
 dj-database-url = "*"
 dj-static = "*"
+autopep8 = "*"
+flake8 = "*"
 
 [dev-packages]
 

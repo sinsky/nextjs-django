@@ -1,3 +1,11 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "python.linting.enabled": true, // Lintの有効化
+  "python.linting.pylintEnabled": false, // pylintの無効化
+  "python.linting.flake8Enabled": true, // flake8の有効化
+  "python.linting.lintOnSave": true, // ファイル保存時のlint実行
+  "python.formatting.provider": "autopep8", // フォーマッタにautopep8
+  "python.linting.flake8Args": [
+    "--ignore=E501"
+  ], // 1行の文字数制限を無視
 }
