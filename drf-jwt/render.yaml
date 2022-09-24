@@ -1,12 +1,12 @@
 databases:
-  - name: api_db
+  - name: udemy_rest_api_database
     plan: free
     databaseName: api_db
     user: api_db
 
 services:
   - type: web
-    name: api
+    name: udemy_rest_api_webservice
     plan: free
     env: python
     buildCommand: "./build.sh"
