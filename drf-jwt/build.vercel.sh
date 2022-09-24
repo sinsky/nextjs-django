@@ -1,5 +1,5 @@
 echo "### requirements install"
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.dev.txt
 
 echo "### list"
 python3 -m pip list
