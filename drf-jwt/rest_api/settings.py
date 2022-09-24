@@ -67,8 +67,10 @@ SIMPLE_JWT = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'], # Viewへのアクセスに認証が必要
-    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework_simplejwt.authentication.JWTAuthentication'], # JWTで認証する
+    # Viewへのアクセスに認証が必要
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    # JWTで認証する
+    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework_simplejwt.authentication.JWTAuthentication'],
 }
 
 ROOT_URLCONF = 'rest_api.urls'
@@ -98,7 +100,8 @@ WSGI_APPLICATION = 'rest_api.wsgi.application'
 default_dburl = 'sqlite:///' + str(BASE_DIR / "db.sqlite3")
 
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl), # envでDATABASEのURLがあればそっちを使いなければ上で定義したものを使う
+    # envでDATABASEのURLがあればそっちを使いなければ上で定義したものを使う
+    'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
 
 # Password validation
