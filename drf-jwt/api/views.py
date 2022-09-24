@@ -2,12 +2,18 @@ from rest_framework.permissions import AllowAny
 from rest_framework import generics, viewsets
 from .serializers import TaskSerializer, PostSerializer, UserSerializer
 from .models import Task, Post
+from django.contrib.auth.models import User
 
 
 class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
     # JWTを生成する前にユーザーを作る必要があるのでこのページではpermissionをanyにする
     permission_classes = (AllowAny,)
+
+
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 class PostListView(generics.ListAPIView):
