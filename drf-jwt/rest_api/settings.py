@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='local_secret_here')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ["localhost", "1.0.0.127.in-addr.arpa"]
+ALLOWED_HOSTS = ["localhost", "1.0.0.127.in-addr.arpa", "127.0.0.1"]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
