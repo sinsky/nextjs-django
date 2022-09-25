@@ -10,8 +10,8 @@ export type PostData = {
 const getAllPostsData = () => {
   const sortData = fetch(`${NEXT_PUBLIC_RESTAPI_URL}/api/list-post/`)
     .then((res) => res.json())
-    .then((data: PostData[]) =>
-      data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+    .then((posts: PostData[]) =>
+      posts.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
     );
   return sortData;
 };
