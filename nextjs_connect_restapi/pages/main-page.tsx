@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Cookie from "universal-cookie";
 import Layout from "../components/Layout";
+import Link from "next/link";
 
 const cookie = new Cookie();
 const cookieKey = "access_token";
@@ -17,6 +18,18 @@ const MailPage = () => {
 
   return (
     <Layout title="Main page">
+      <div className="mb-10">
+        <Link href="/blog-page">
+          <a className="px-4 py-12 mr-8 text-white bg-indigo-500 rounded hover:bg-indigo-600">
+            Visit Blog by SSG + ISR
+          </a>
+        </Link>
+        <Link href="/task-page">
+          <a className="px-4 py-12 mr-8 text-white bg-gray-500 rounded hover:bg-gray-600">
+            Visit Blog by SSG + ISR
+          </a>
+        </Link>
+      </div>
       <button onClick={logout}>
         <svg
           className="w-6 h-6 mt-10 cursor-pointer"
